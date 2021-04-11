@@ -1,0 +1,288 @@
+/*
+Theme Name: 	biolab
+Description: 	Responsive WordPress Theme.
+Version:     	1.0.0
+Author:     	Massimo Dattero
+Author URI:   http://www.
+Site:         http://www.
+Text Domain: 	biolab
+Domain Path: 	/languages
+Tags:        	grid-layout, blog, custom-menu, featured-images, right-sidebar
+License:    	GNU General Public License v3.0
+License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, cursive;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  background-color: #66ffc2;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff; /* white */
+}
+
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #66ffc2;
+  text-decoration: none;
+  color: black;
+  background-color: #ccffeb;
+  margin-bottom: 10px;
+}
+
+.header li a:hover, .menu-btn:hover {
+  background-color: white;
+}
+
+.logo {
+  display: block;
+  float: left;
+  font-size: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* menu */
+
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 14px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.navicon {
+  font-size: 25px;
+}
+
+.cross {
+  display: none;
+}
+
+.menu-item {
+  height: 50px;
+}
+
+/* menu btn */
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu-icon .cross {
+  display: block;
+}
+
+/* title */
+
+.main-title {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #00804d;
+}
+
+
+/* sidebar */
+
+.sidebar {
+  width: 30%;
+  float: left;
+}
+
+.widget {
+  padding: 20px;
+}
+
+.widget h3 {
+  padding-bottom: 10px;
+  color: #00804d;
+}
+
+.widget ul li {
+  list-style-type: none;
+  margin-bottom: 7px;
+}
+
+.widget ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.widget ul li a:hover {
+  cursor: pointer;
+  background-color: #00804d;
+  color: white;
+}
+
+.item-sidebar a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* page */
+
+.space {
+  height: 80px;
+  background-color: #f2f2f2;
+}
+
+.content {
+  width: 65%;
+  margin: 20px 10px;
+  float: left;
+  border-radius: 10px;
+}
+
+.content .page {
+  background-color: white;
+  padding: 10px;
+}
+
+.content .page h2 {
+  padding-bottom: 10px;
+}
+
+.content .page h2 a {
+  text-decoration: none;
+  color: #00804d;
+}
+
+.wp-block-quote {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  clear: left;
+  padding: 10px;
+  background-color: green;
+}
+
+/*  post  */
+
+.post {
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.post h2 {
+  padding-bottom: 10px;
+}
+
+.post p {
+  padding-bottom: 10px;
+}
+
+.post a {
+  text-decoration: none;
+  color: #00804d;
+}
+
+.post a:hover {
+  background-color: #00804d;
+  color: white;
+}
+
+/* comment */
+
+.comment-reply-title {
+  padding: 10px 0;
+}
+
+.comment-respond {
+  text-align: center;
+}
+
+.submit {
+  background-color: #00804d;
+  color: white;
+  cursor: pointer;
+}
+
+/* contact */
+
+.wpcf7-submit {
+  background-color: #00804d;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  .header li {
+    float: left;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 90%;
+    float: none;
+    margin: auto;
+  }
+  .content {
+    width: 90%;
+    float: none;
+    margin: 20px auto;
+  }
+}
